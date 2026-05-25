@@ -1,5 +1,7 @@
 import axios from 'axios';
-const API = axios.create({ baseURL: 'https://fintrack-z91l.onrender.com/api' });
+const API = axios.create({ baseURL: 'https://fintrack-z91l.onrender.com/api' ,
+  withCredentials: true
+});
 
 API.interceptors.request.use((config) => {
   const token = localStorage.getItem('fintrack_token');
