@@ -20,7 +20,7 @@ export const AuthProvider = ({ children }) => {
   }, [token]);
 
   const login = async (email, password) => {
-    const res = await axios.post('https://fintrack-z91l.onrender.com/api/auth/login', { email, password });
+    const res = await axios.post('https://fintrack-z9l1.onrender.com/api/auth/login', { email, password });
     setToken(res.data.token);
     setUser(res.data.user);
     localStorage.setItem('fintrack_token', res.data.token);
@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const register = async (name, email, password) => {
-    const res = await axios.post('https://fintrack-z91l.onrender.com/api/auth/register', { name, email, password });
+    const res = await axios.post('https://fintrack-z9l1.onrender.com/api/auth/register', { name, email, password });
     setToken(res.data.token);
     setUser(res.data.user);
     localStorage.setItem('fintrack_token', res.data.token);
