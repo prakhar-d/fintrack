@@ -7,13 +7,10 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ['https://fintrack-sigma-bay.vercel.app'],
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  origin: 'https://fintrack-sigma-bay.vercel.app',
   credentials: true
 }));
 
-app.options('*', cors());
 app.use(express.json());
 app.get('/health', (req, res) => res.json({ status: 'ok' }));
 // Routes
